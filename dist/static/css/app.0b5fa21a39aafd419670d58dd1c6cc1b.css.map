@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.0b5fa21a39aafd419670d58dd1c6cc1b.css"],"names":[],"mappings":"AACA,KACE,8CAAoD,AACpD,aAAe,CAChB","file":"app.0b5fa21a39aafd419670d58dd1c6cc1b.css","sourcesContent":["\n#app {\n  font-family: 'Avenir', Helvetica, Arial, sans-serif;\n  color: #2c3e50;\n}\n"]}

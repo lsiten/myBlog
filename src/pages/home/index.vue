@@ -1,6 +1,6 @@
 <template>
   <div class="home_index">
-      index
+      111
   </div>
 </template>
 <style lang="less" scoped>

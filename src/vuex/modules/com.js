@@ -8,7 +8,52 @@ import * as types from '../types'
 const state = {
     title:'',
     loading:0,
-    leftNavState:false
+    leftNavState:false,
+    navMenu:[
+        {
+            id:'1',
+            router:{
+                name:'index'
+            },
+            isHref:false,
+            label:'首页'
+        },
+        {
+            id:'2',
+            router:'/',
+            isHref:false,
+            label:'我的工作台',
+            children: [
+                {
+                    id:'4',
+                    router:{
+                        name:'test'
+                    },
+                    isHref:false,
+                    label:'选项1'
+                },
+                {
+                    id:'5',
+                    router:'/',
+                    isHref:false,
+                    label:'选项2'
+                },
+                {
+                    id:'6',
+                    router:'/',
+                    isHref:false,
+                    label:'选项3'
+                },
+            ]
+        },
+        {
+            id:'3',
+            router:'/',
+            href:'https://my.lsiten.cn',
+            isHref:true,
+            label:'订单管理'
+        }
+    ]
 }
 
 const actions = {
@@ -25,7 +70,8 @@ const getters = {
     comConf: state => state,
     loading: state => state.loading,
     title: state => state.title,
-    leftNavState: state => state.leftNavState
+    leftNavState: state => state.leftNavState,
+    getNavMenu: state => state.navMenu
 }
 const mutations = {
     [types.COM_CONF](state,settings){
