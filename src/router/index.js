@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/pages/home/index'
-import test from '@/pages/home/test'
+import cate from '@/pages/cate/cate'
 
 
 
@@ -15,9 +15,9 @@ export default new Router({
       component: index
     },
     {
-      path: '/test',
-      name: 'test',
-      component: test
+      path: '/cate/:id',
+      name: 'cate',
+      component: cate
     },
 
   ]

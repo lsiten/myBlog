@@ -22,36 +22,70 @@ const state = {
             id:'2',
             router:'/',
             isHref:false,
-            label:'我的工作台',
+            label:'前端日记',
             children: [
                 {
                     id:'4',
                     router:{
-                        name:'test'
+                        name:'cate',
+                        params:{id:4}
                     },
                     isHref:false,
-                    label:'选项1'
+                    label:'JavaScript'
                 },
                 {
                     id:'5',
-                    router:'/',
+                    router:{
+                        name:'cate',
+                        params:{id:5}
+                    },
                     isHref:false,
-                    label:'选项2'
+                    label:'VueJs'
                 },
                 {
                     id:'6',
-                    router:'/',
+                    router:{
+                        name:'cate',
+                        params:{id:6}
+                    },
                     isHref:false,
-                    label:'选项3'
+                    label:'ionic'
+                },
+                {
+                    id:'7',
+                    router:{
+                        name:'cate',
+                        params:{id:7}
+                    },
+                    isHref:false,
+                    label:'基础内容'
                 },
             ]
+        },
+        {
+            id:'8',
+            router:{
+                name:'cate',
+                params:{id:8}
+            },
+            isHref:false,
+            label:'生活游记'
         },
         {
             id:'3',
             router:'/',
             href:'https://my.lsiten.cn',
             isHref:true,
-            label:'订单管理'
+            label:'自我介绍'
+        },
+        {
+            id:'9',
+            router:{
+                name:'cate',
+                params:{id:9}
+            },
+            isHref:false,
+            label:'联系我'
         }
     ]
 }

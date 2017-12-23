@@ -6,11 +6,20 @@ import router from './router'
 import store from './vuex'
 import { sync } from 'vuex-router-sync'
 import ElementUI from 'element-ui'
+import VueLazyload from 'vue-lazyload'
 import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+
+//图片懒加载
+Vue.use(VueLazyload, {
+  error: 'http://oear5piod.bkt.clouddn.com/error.png',
+  loading: 'http://oear5piod.bkt.clouddn.com/loading.png',
+  attempt: 1
+})
+
 
 sync(store, router)
 // create the app instance.

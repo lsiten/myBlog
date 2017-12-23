@@ -37,7 +37,20 @@
           <el-main>
             <router-view/>
           </el-main>
-          <el-footer>Footer</el-footer>
+          <el-footer height='auto'>
+            <p>
+              手　机：18565884671
+            </p>
+            <p>
+              邮　箱：1304906404@qq.com
+            </p>
+            <p>
+              备案号：津ICP备15007079号-1
+            </p>
+            <p>
+              版　权：©2012-2016 lsiten版权所有
+            </p>
+          </el-footer>
         </el-container>
       </el-container>
     </el-container>
@@ -86,7 +99,7 @@ a{
    height: 100%;
  }
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   color: #2c3e50;
 }
 body{
@@ -96,11 +109,20 @@ body{
 .el-header {
       background-color: #545c64;
 }
+.el-main{
+  padding:0;
+  margin:0;
+}
 .el-footer {
-  background-color: #B3C0D1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
+  background-color: #545c64;
+  padding: 20px 0px;
+  p{
+    color: #fff;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    margin: 0;
+  }
 }
 .el-aside{
   background-color: #D3DCE6;
@@ -109,6 +131,5 @@ body{
    background-color: #E9EEF3;
    color: #333;
    text-align: center;
-   line-height: 160px;
  }
 </style>

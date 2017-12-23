@@ -3,12 +3,14 @@
  * api配置
  */
 import axios from 'axios'
+import Mock from 'mockjs'
 
-let url = process.env.NODE_ENV !== 'production' ? '/api/' : 'http://m.maizuo.com/v4/api/';
+let url = process.env.NODE_ENV !== 'production' ? 'http://rap.taobao.org/mockjs/30523/' : 'http://api.lsiten.cn/api.php/';
 
 let func_axios = (api,cb) => {
     axios.get(api).then(function(res){
         if(res.status >= 200 && res.status <300){
+            res.data = Mock.mock(res.data);
             cb(res.data)
         }
     }).catch((error) => {
@@ -21,6 +23,7 @@ let fun_axios_post = (api, body, cb) => {
     axios.post(api, body)
       .then((res) => {
         if (res.status >= 200 && res.status < 300) {
+          res.data = Mock.mock(res.data);
           cb(res.data);
         }
       })
@@ -30,5 +33,11 @@ let fun_axios_post = (api, body, cb) => {
   }
 
 export default {
-   
+   //获取走马灯数据
+   getCarouseDataApi:(api,cb)=>func_axios(url+api,cb),
+   //获取文章数据
+   getArticleDataApi:(api,cb)=>func_axios(url+api,cb),
+
+   //获取栏目数据
+   getCateInfoApi:(api,cb)=>func_axios(url+api,cb)
 }
