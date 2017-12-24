@@ -5,8 +5,8 @@
 import axios from 'axios'
 import Mock from 'mockjs'
 
-// let url = process.env.NODE_ENV !== 'production' ? 'http://rap.taobao.org/mockjs/30523/' : 'http://api.lsiten.cn/api.php/';
- let url = 'http://rap.taobao.org/mockjs/30523/';
+let url = process.env.NODE_ENV !== 'production' ? 'http://rap.taobao.org/mockjs/30523/' : 'http://api.lsiten.cn/api.php/';
+//  let url = 'http://rap.taobao.org/mockjs/30523/';
 
 let func_axios = (api,cb) => {
     axios.get(api).then(function(res){
