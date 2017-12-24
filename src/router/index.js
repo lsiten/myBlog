@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/pages/home/index'
 import cate from '@/pages/cate/cate'
+import content from '@/pages/content/index'
 
 
 
@@ -19,6 +20,11 @@ export default new Router({
       name: 'cate',
       component: cate
     },
+    {
+      path: '/content/:id',
+      name: 'content',
+      component: content
+    }
 
   ]
 })

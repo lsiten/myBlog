@@ -13,6 +13,7 @@ import 'element-ui/lib/theme-chalk/display.css'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 
+
 //图片懒加载
 Vue.use(VueLazyload, {
   error: 'http://oear5piod.bkt.clouddn.com/error.png',

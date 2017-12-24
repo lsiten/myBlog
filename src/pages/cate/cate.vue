@@ -25,9 +25,16 @@ import {mapGetters} from 'vuex';
 import cateContent from './content'
 export default {
     name: "cate_cate",
+    beforeRouteUpdate(to, from, next){
+        let id = this.$route.params.id;
+        this.$store.dispatch('changeLoading',true);
+        this.$store.dispatch('getCateInfo',id);
+        next();
+    },
     created () {
         let id = this.$route.params.id;
-        this.$store.dispatch('getCateInfo',id);
+        this.$store.dispatch('changeLoading',true);
+        this.$store.dispatch('getCateInfo',id);  
     },
     computed: {
         ...mapGetters({

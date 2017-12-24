@@ -39,5 +39,11 @@ export default {
    getArticleDataApi:(api,cb)=>func_axios(url+api,cb),
 
    //获取栏目数据
-   getCateInfoApi:(api,cb)=>func_axios(url+api,cb)
+   getCateInfoApi:(api,cb)=>func_axios(url+api,cb),
+   //获取栏目文章数据
+   getCateArticleApi:(api,cb)=>func_axios(url+api,cb),
+
+   getContentArticleApi:(api,cb)=>func_axios(url+api,cb),
+
+
 }

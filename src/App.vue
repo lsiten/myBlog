@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <div class="loading-box" v-show="loading">
+      <div class="box-mask">
+        <div class="box-content">
+           <i class="iconfont blog-loading">
+           </i>
+        </div>
+      </div>
+    </div>
     <el-container>
       <el-header>
         <headerbar></headerbar>
@@ -73,7 +81,8 @@ export default {
   computed: {
     ...mapGetters({
       leftNavShow: 'leftNavState',
-      navMenu: 'getNavMenu'
+      navMenu: 'getNavMenu',
+      loading: 'loading'
     })
   },
   methods: {
@@ -86,6 +95,34 @@ export default {
 </script>
 
 <style lang="less">
+.loading-box{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  .box-mask{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    .box-content{
+      position: absolute;
+      padding: 15px;
+      width: 85px;
+      height: 85px;
+      text-align: center;
+      line-height: 85px;
+      background: #fff;
+      border-radius: 5px;
+      top: 50%;
+      left: 50%;
+      margin-top: -50px;
+      margin-left: -50px;
+    }
+  }
+}
 a{
    text-decoration: none;
    &:hover{
@@ -123,9 +160,6 @@ body{
     font-size: 12px;
     margin: 0;
   }
-}
-.el-aside{
-  background-color: #D3DCE6;
 }
 .el-main {
    background-color: #E9EEF3;

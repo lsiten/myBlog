@@ -7,7 +7,7 @@ import * as types from '../types'
  */
 const state = {
     title:'',
-    loading:0,
+    loading:false,
     leftNavState:false,
     navMenu:[
         {
@@ -74,7 +74,7 @@ const state = {
         {
             id:'3',
             router:'/',
-            href:'https://my.lsiten.cn',
+            href:'http://my.lsiten.cn',
             isHref:true,
             label:'自我介绍'
         },
@@ -95,6 +95,10 @@ const actions = {
     comConf({commit},settings){
         commit(types.COM_CONF,settings)
     },
+    //改变loading
+    changeLoading({commit},status){
+        commit(types.COM_LOADING_STATUS,status)
+    },
     //左侧导航栏的开关
     changeLeftNavState({commit},status){
         commit(types.CHANGE_LEFTNAV_STATUS,status)
@@ -112,10 +116,7 @@ const mutations = {
         state = Object.assign(state,settings)
     },
     [types.COM_LOADING_STATUS](state,status){
-        if(state.loading == 0 && !status){
-            return ;
-        }
-        state.loading = status ? ++state.loading : --state.loading;
+        state.loading = status;
     },
     [types.CHANGE_LEFTNAV_STATUS](state,status){
         state.leftNavState = status
