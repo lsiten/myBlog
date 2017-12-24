@@ -59,7 +59,6 @@
 
 .el-main{
     background: #fff;
-    padding: 10px 20px;
     .content-title{
         text-align: center;
         color: #555;
@@ -81,6 +80,7 @@
 
     .content-body{
         margin-top: 15px;
+        padding: 10px 20px;
         line-height: 28px;
         font-size: 14px;
         text-align:justify;

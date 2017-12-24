@@ -147,8 +147,8 @@ body{
       background-color: #545c64;
 }
 .el-main{
-  padding:0;
-  margin:0;
+  padding:0 !important;
+  margin:0 !important;
 }
 .el-footer {
   background-color: #545c64;
