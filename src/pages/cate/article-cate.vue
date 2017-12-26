@@ -6,25 +6,31 @@
                     <article class="article-list" v-for="article in ArticleData" v-bind:key="article.id">
                         <el-card :body-style="{ padding: '0px' }">
                                 <a :href="article.href" :title="article.title">
-                                    <div class="article-image">
-                                        <img v-lazy='article.thumb'>
-                                    </div>
-                                    <div class='article-detail'>
-                                        <h3>{{article.title}}</h3>
-                                        <div class="article-info">
-                                            <time class="time">
-                                                <i class="iconfont blog-time"></i>
-                                                {{article.time}}
-                                            </time>
-                                            <span class="author">
-                                                <i class="iconfont blog-user"></i>                                
-                                                {{article.author}}
-                                            </span>
-                                        </div>
-                                        <div class="article-summary">
-                                            {{article.summary}}
-                                        </div>
-                                    </div>
+                                    <el-row>
+                                        <el-col :xs="12" :sm="8" :md="6">
+                                            <div class="article-image">
+                                                <img v-lazy='article.thumb'>
+                                            </div>
+                                        </el-col>
+                                        <el-col :xs="12" :sm="16" :md="18">
+                                            <div class='article-detail'>
+                                                <h3>{{article.title}}</h3>
+                                                <div class="article-info">
+                                                    <time class="time">
+                                                        <i class="iconfont blog-time"></i>
+                                                        {{article.time}}
+                                                    </time>
+                                                    <span class="author">
+                                                        <i class="iconfont blog-user"></i>                                
+                                                        {{article.author}}
+                                                    </span>
+                                                </div>
+                                                <div class="article-summary">
+                                                    {{article.summary}}
+                                                </div>
+                                            </div>
+                                        </el-col>
+                                    </el-row>
                                 </a>
                             </el-card>
                     </article>
@@ -40,7 +46,7 @@
                     </div>
                 </div>
             </el-main>
-            <el-aside class="hidden-sm-and-down" width="300px">
+            <el-aside class="hidden-sm-and-down">
               <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     <span>加我微信</span>
@@ -103,7 +109,6 @@
         justify-content: flex-start;
         padding: 10px;
         .article-image{
-            width: 300px;
             height: auto;
             img{
                 width: 100%;

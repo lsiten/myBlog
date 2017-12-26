@@ -14,7 +14,7 @@
                 </section>
 
             </el-main>
-            <el-aside>
+            <el-aside class="hidden-sm-and-down">
                 <el-card class="box-card">
                 <div slot="header" class="clearfix">
                     <span>加我微信</span>
@@ -105,7 +105,7 @@ export default {
                 cb: this.cbArticleContentData
             }
         this.$store.dispatch('changeLoading',true);
-        this.$store.dispatch('getArticleContent',params);  
+        this.$store.dispatch('getArticleContent',params);
     },
     computed: {
         ...mapGetters({

@@ -16,8 +16,8 @@ Vue.use(ElementUI)
 
 //图片懒加载
 Vue.use(VueLazyload, {
-  error: 'http://oear5piod.bkt.clouddn.com/error.png',
-  loading: 'http://oear5piod.bkt.clouddn.com/loading.png',
+  error: 'http://cdn.lsiten.cn/error.png',
+  loading: 'http://cdn.lsiten.cn/loading.png',
   attempt: 1
 })
 

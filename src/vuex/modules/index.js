@@ -15,9 +15,11 @@ const state = {
 
 const actions = {
     //获取走马灯数据
-    getCarouselData({commit}){
+    getCarouselData({commit},params){
         api.getCarouseDataApi(state.url.Carousel,(data)=>{   
-            commit(types.GET_CAROUSEL_DATA,data.data)
+            commit(types.GET_CAROUSEL_DATA,data.data);
+            commit(types.COM_LOADING_STATUS,false);
+            params.cb();
         })
     },
     //获取文章数据

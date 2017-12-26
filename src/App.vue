@@ -46,18 +46,20 @@
             <router-view/>
           </el-main>
           <el-footer height='auto'>
-            <p>
-              手　机：18565884671
-            </p>
-            <p>
-              邮　箱：1304906404@qq.com
-            </p>
-            <p>
-              备案号：津ICP备15007079号-1
-            </p>
-            <p>
-              版　权：©2012-2016 lsiten版权所有
-            </p>
+           <div class="app-footer">
+              <p>
+                手　机：18565884671
+              </p>
+              <p>
+                邮　箱：1304906404@qq.com
+              </p>
+              <p>
+                备案号：津ICP备15007079号-1
+              </p>
+              <p>
+                版　权：©2012-2016 lsiten版权所有
+              </p>
+           </div>
           </el-footer>
         </el-container>
       </el-container>
@@ -88,6 +90,7 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
         this.activeIndex2 = key;
+        this.$store.dispatch('changeLeftNavState',false);
         console.log(key, keyPath);
       },
   }
@@ -152,7 +155,9 @@ body{
 }
 .el-footer {
   background-color: #545c64;
-  padding: 20px 0px;
+  .app-footer{
+    padding: 20px 0px;
+  }
   p{
     color: #fff;
     text-align: center;

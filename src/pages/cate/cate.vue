@@ -34,7 +34,7 @@ export default {
     created () {
         let id = this.$route.params.id;
         this.$store.dispatch('changeLoading',true);
-        this.$store.dispatch('getCateInfo',id);  
+        this.$store.dispatch('getCateInfo',id);
     },
     computed: {
         ...mapGetters({

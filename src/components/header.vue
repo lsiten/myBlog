@@ -36,14 +36,14 @@
     </el-menu>
     <div class="hidden-md-and-up">
       <el-row :gutter="10">
-        <el-col :xs='{span: 16, offset: 4}' :sm='{span: 14, offset: 5}'>
+        <el-col :xs='{span: 14, offset: 4}' :sm='{span: 14, offset: 5}'>
           <div class="content">
             <el-input v-model="keyword" placeholder="请输入关键字">
               <el-button slot="append" icon="el-icon-search"></el-button>
             </el-input>
           </div>
         </el-col>
-        <el-col :xs="4" :sm="5">
+        <el-col :xs="{span:2, offset: 4}" :sm="5">
           <div class="menuButton">
             <el-button type='info' @click="showSideMenu" icon="el-icon-more"></el-button>
           </div>
